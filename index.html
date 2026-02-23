@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flower Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #413138;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #4e0d1f;
+            color: white;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ff99aa;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 50px;
+        }
+
+        .hero-text {
+            width: 50%;
+        }
+
+        .hero-text h1 {
+            font-size: 45px;
+            color: #ffffff; 
+        }
+
+        .hero img {
+            width: 400px;
+            border-radius: 15px;
+        }
+
+        /* Shop Section */
+        .shop {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .shop h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        
+        .card {
+            background: white;
+            width: 250px;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease-in-out;   
+            cursor: pointer;
+        }
+
+       
+        .card:hover {
+            transform: translateY(-15px); 
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+            border: 1px solid #4e0d1f;     
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+            color: #4e0d1f;
+        }
+
+        .price {
+            color: #000000;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card button {
+            padding: 8px 15px;
+            border: none;
+            background-color: #360318;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .card button:hover {
+            background-color: #4e0d1f;
+            transform: scale(1.05); 
+        }
+
+        /* Footer */
+        footer {
+            background-color: #360318;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>Flower Shop</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Fresh Flowers</h1>
+        </div>
+        <img src="https://i.pinimg.com/736x/c7/47/25/c747254e01068ab0569380eb73a73b30.jpg" alt="Flowers">
+    </section>
+
+    <section class="shop" id="shop">
+        <h2>Our Flowers</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <img src="https://i.pinimg.com/1200x/5f/d3/1e/5fd31ede61a822f34676600342eb5011.jpg" alt="">
+                <h3>Red Roses</h3>
+                <div class="price">800EG</div>
+                <button>Buy</button>
+            </div>
+
+            <div class="card">
+                <img src="https://i.pinimg.com/736x/c7/b1/11/c7b11157f01e0e37c012ba8cabb899aa.jpg" alt="">
+                <h3>White Tulips</h3>
+                <div class="price">620EG</div>
+                <button>Buy</button>
+            </div>
+
+            <div class="card">
+                <img src="https://i.pinimg.com/736x/47/76/14/477614b8a340357a8bd51073dac92cee.jpg" alt="">
+                <h3>Sunflowers</h3>
+                <div class="price">480EG</div>
+                <button>Buy</button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 Zooma Flower Shop. .<br>
+        <small>Made with ❤️ for flower </small>
+    </footer>
+
+</body>
+</html>
