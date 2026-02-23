@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,22 +12,23 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            
             font-family: 'Poppins', sans-serif;
         }
 
         body {
             background-color: #413138;
+            overflow-x: hidden; 
         }
 
         /* Navbar */
         nav {
             background-color: #4e0d1f;
             color: white;
-            padding: 15px 50px;
+            padding: 15px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap; 
         }
 
         nav ul {
@@ -40,10 +41,7 @@
             text-decoration: none;
             color: white;
             font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #ff99aa;
+            font-size: 14px;
         }
 
         /* Hero Section */
@@ -51,26 +49,31 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 60px 50px;
+            padding: 60px 5%;
+            flex-wrap: wrap;
+            gap: 30px;
         }
 
         .hero-text {
             width: 50%;
+            min-width: 300px; 
         }
 
         .hero-text h1 {
-            font-size: 45px;
-            color: #ffffff; 
+            font-size: clamp(30px, 5vw, 45px); 
+            color: #ffffff;
         }
 
         .hero img {
-            width: 400px;
+            width: 100%;
+            max-width: 400px;
             border-radius: 15px;
+            height: auto;
         }
 
         /* Shop Section */
         .shop {
-            padding: 50px;
+            padding: 50px 5%;
             text-align: center;
         }
 
@@ -84,56 +87,83 @@
             justify-content: center;
             gap: 25px;
             margin-top: 30px;
-            flex-wrap: wrap;
+            flex-wrap: wrap; /
         }
 
-        
         .card {
             background: white;
-            width: 250px;
+            width: 280px; 
             padding: 15px;
             border-radius: 12px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s ease-in-out;   
+            transition: all 0.3s ease-in-out;
             cursor: pointer;
         }
 
-       
         .card:hover {
-            transform: translateY(-15px); 
+            transform: translateY(-15px);
             box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-            border: 1px solid #4e0d1f;     
         }
 
         .card img {
             width: 100%;
+            height: 250px; 
+            object-fit: cover; 
             border-radius: 10px;
         }
 
         .card h3 {
-            margin: 10px 0;
+            margin: 15px 0 5px;
             color: #4e0d1f;
         }
 
         .price {
             color: #000000;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .card button {
-            padding: 8px 15px;
+            width: 100%; 
+            padding: 10px;
             border: none;
             background-color: #360318;
             color: white;
             border-radius: 5px;
             cursor: pointer;
-            transition: 0.3s;
         }
 
-        .card button:hover {
-            background-color: #4e0d1f;
-            transform: scale(1.05); 
+        
+        @media (max-width: 768px) {
+            nav {
+                justify-content: center;
+                text-align: center;
+                padding: 15px;
+            }
+            
+            nav h2 {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .hero {
+                flex-direction: column-reverse; 
+                text-align: center;
+                padding: 30px 5%;
+            }
+
+            .hero-text {
+                width: 100%;
+            }
+
+            .hero img {
+                max-width: 100%;
+            }
+
+            .card {
+                width: 100%; 
+                max-width: 320px;
+            }
         }
 
         /* Footer */
@@ -141,12 +171,11 @@
             background-color: #360318;
             color: white;
             text-align: center;
-            padding: 15px;
+            padding: 20px;
             margin-top: 40px;
         }
     </style>
 </head>
-
 <body>
 
     <nav>
@@ -160,37 +189,34 @@
 
     <section class="hero">
         <div class="hero-text">
-            <h1>Fresh Flowers</h1>
+            <h1>Fresh Flowers For You</h1>
         </div>
         <img src="https://i.pinimg.com/736x/c7/47/25/c747254e01068ab0569380eb73a73b30.jpg" alt="Flowers">
     </section>
 
     <section class="shop" id="shop">
         <h2>Our Flowers</h2>
-
         <div class="cards">
-
             <div class="card">
-                <img src="https://i.pinimg.com/1200x/5f/d3/1e/5fd31ede61a822f34676600342eb5011.jpg" alt="">
+                <img src="https://i.pinimg.com/1200x/5f/d3/1e/5fd31ede61a822f34676600342eb5011.jpg" alt="Red Roses">
                 <h3>Red Roses</h3>
-                <div class="price">800EG</div>
-                <button>Buy</button>
+                <div class="price">800 EGP</div>
+                <button>Buy Now</button>
             </div>
 
             <div class="card">
-                <img src="https://i.pinimg.com/736x/c7/b1/11/c7b11157f01e0e37c012ba8cabb899aa.jpg" alt="">
+                <img src="https://i.pinimg.com/736x/c7/b1/11/c7b11157f01e0e37c012ba8cabb899aa.jpg" alt="White Tulips">
                 <h3>White Tulips</h3>
-                <div class="price">620EG</div>
-                <button>Buy</button>
+                <div class="price">620 EGP</div>
+                <button>Buy Now</button>
             </div>
 
             <div class="card">
-                <img src="https://i.pinimg.com/736x/47/76/14/477614b8a340357a8bd51073dac92cee.jpg" alt="">
+                <img src="https://i.pinimg.com/736x/47/76/14/477614b8a340357a8bd51073dac92cee.jpg" alt="Sunflowers">
                 <h3>Sunflowers</h3>
-                <div class="price">480EG</div>
-                <button>Buy</button>
+                <div class="price">480 EGP</div>
+                <button>Buy Now</button>
             </div>
-
         </div>
     </section>
 
@@ -198,6 +224,9 @@
         &copy; 2026 Zooma Flower Shop. .<br>
         <small>Made with ❤️ for flower </small>
     </footer>
+
+</body>
+</html>
 
 </body>
 </html>
